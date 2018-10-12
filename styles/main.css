@@ -1,0 +1,157 @@
+*{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 14px;
+}
+
+figcaption{
+    font-size: 12px;
+}
+
+header img {
+    width: 60%;
+}
+
+
+h1, h2{
+   text-align: center;
+}
+
+li a{
+    text-decoration:none;
+    color:black;
+    font-size: 15px;
+}
+
+li a:active{
+    text-decoration: underline black;
+}
+
+ul{
+    list-style-type: none;
+    flex-flow:row;
+    align-items:center;
+}
+
+.foto img{
+    width:100%;
+}
+
+.content img{
+    width:100%;
+}
+
+.competitie{
+    width:75%;
+}
+
+.header{
+    
+}
+    
+.foto{
+    
+}
+
+.content{
+    margin: 2%;
+    border: solid 2px #FFB612;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info{
+    margin: 2%;
+    border: solid 2px #FFB612;
+}
+
+.info p{
+    margin: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button{
+    border-radius: 4px;
+    background-color: #FFB612;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    width: 25%;
+    transition: all 1s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 1s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.contact{
+    text-align: center;
+    margin: 2%;
+    border: solid 2px #FFB612;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.open{
+    text-align: center;
+    margin: 2%;
+    border: solid 2px #FFB612;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer{
+    text-align: center;
+    background-color: #deeff5;
+}
+
+.footer a, .footer img{
+    text-decoration: none;
+    color: #7997a1;
+}
+
+.footer img{
+    width: 3%;
+}

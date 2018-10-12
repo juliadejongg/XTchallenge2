@@ -1,0 +1,212 @@
+
+body{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-template-areas:
+        "header"
+        "menu"
+        "foto"
+        "info"
+        "content"
+        "contact"
+        "open"
+        "footer";
+}
+
+.header{
+    grid-area: header;
+}
+
+#menu{
+    grid-area: menu;
+}
+
+.foto{
+    grid-area: foto;
+}
+
+.content{
+    grid-area: content;
+}
+
+.info{
+    grid-area: info;
+}
+
+.contact{
+    grid-area: contact;
+}
+
+.open{
+    grid-area: open;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+    border: solid 4px #FFB612;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    flex-grow: 1;
+    display: flex;
+    padding: 0.4em;
+    margin: 0.4em;
+    list-style: none;
+    justify-content: center;
+  }
+
+  nav ul li:hover {
+    background-color: #FFB612;
+  }
+
+.menutoggle{
+    margin-left: auto; /*Rechterkant van het scherm in het hoekje */
+  }
+
+.menutoggle a{
+    font-size:2em;
+    color: #000000;
+    text-decoration: none;
+  }
+
+.active{
+    /*display: initial; --> Dit betekent AAN of UIT*/
+    max-height: 400px; /* Geen display gebruiken maar een max-height. Display: initial of display: none */
+    transition: max-height 2s;
+}
+
+.inactive{
+    display: none;
+    max-height:0px;
+    transition: max-height 2s; /* Als je bijv. font grootte verandert, dan pakt de transition het alleen op de max-height ipv alles*/
+}
+
+/* Tablet ------------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 768px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+              "header header"
+              "menu menu"
+              "foto foto"
+              "info content"
+              "contact open"
+              "footer footer";
+    }
+
+    p, .footer h3, .footer a{
+        font-size: 15px;
+    }
+
+    figcaption{
+        font-size: 12px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        flex-grow: 1;
+    }
+
+    .menutoggle{
+        display:none;
+    }
+
+    .active, .inactive{
+        /*display: initial; Zodat je menu ook blijft als je het scherm breder maakt. Ipv als je het
+        hamburgermenu uitklapt de rest van het menu wegvalt.*/
+        max-height: initial; /*initial betekent standaard, hoe je dat normaal gesproken zou doen*/
+    }
+
+    .button{
+        font-size: 15px;
+    }
+    
+    .inactive {
+        display: initial;
+    }
+    
+}
+
+/* Laptop klein ------------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 1200px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+              "header menu"
+              "foto foto"
+              "info content"
+              "contact open"
+              "footer footer";
+    }
+
+    nav{
+        border: none;
+    }
+
+    p, .footer h3, .footer a{
+        font-size: 20px;
+    }
+
+    figcaption{
+        font-size: 15px;
+    }
+
+    .button{
+        font-size: 20px;
+    }
+
+    .inactive {
+        display: initial;
+    }
+}
+
+/* Desktop groot ------------------------------------------------------------------------------------------------ */
+@media only screen and (min-width: 1400px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 15px;
+        grid-column-gap: 15px;
+        grid-template-areas:
+              "header menu menu"
+              "foto foto contact"
+              "info content open"
+              "footer footer footer";
+    }
+
+    p, .footer h3, .footer a{
+        font-size: 30px;
+    }
+
+    figcaption{
+        font-size: 20px;
+    }
+
+    .button{
+        font-size: 30px;
+    }
+
+}
